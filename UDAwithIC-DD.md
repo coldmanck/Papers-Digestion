@@ -19,9 +19,9 @@ However, existing approaches for unsupervised domain adaptation typically assume
 - the label numbers of the source and target domains are the same, while the number of categories in the source domain is often larger than that in the target domain.
 - the data of each class presented in the source or target domains exhibit similar data distributions (i.e. they come from the **same domain**), while both source and target-domain data may come from multiple datasets. 
 
-This paper refer this as the presence of **imblanced cross-domain data**.  In this work, We propose an MMD-based algorithm of *CLosest Common Space Learning* (CCSL). The major advantage of this CCSL is its ability in dealing with imbalanced cross-domain data for unsupervised domain adaptation. By exploiting label and structural information within and across domains, latent source domains can be identified for adaptation and recognition purposes.
+This paper refer this as the presence of **imblanced cross-domain data**.  In this work, We propose an MMD-based algorithm of *Closest Common Space Learning* (CCSL). The major advantage of this CCSL is its ability in dealing with imbalanced cross-domain data for unsupervised domain adaptation. By exploiting label and structural information within and across domains, latent source domains can be identified for adaptation and recognition purposes.
 
 Contributions of this paper:
-- Propose *CLosest Common Space Learning* (CCSL) to jointly solves instance reweighting and subspace which learns to learn the the latent sub-domains for adaptation.
-- *CLosest Common Space Learning* (CCSL) exploits both label and structural information for data within and across domains. This is achieved by relating latent source-target domain oaurs, with the ability to disregard irrelevant source domain instances during adaptation.
+- Propose *Closest Common Space Learning* (CCSL) to jointly solves instance reweighting and subspace which learns to learn the the latent sub-domains for adaptation.
+- *Closest Common Space Learning* (CCSL) exploits both label and structural information for data within and across domains. This is achieved by relating latent source-target domain oaurs, with the ability to disregard irrelevant source domain instances during adaptation.
 - In addition to achieving satisfactory performance on benchmark cross=domain classification datasets, our method perform favorably against recent unsupervised domain adaptation approaches on problems with imbalanced cross-domain data.
