@@ -25,3 +25,8 @@ Contributions of this paper:
 - Propose *Closest Common Space Learning* (CCSL) to jointly solves instance reweighting and subspace which learns to learn the the latent sub-domains for adaptation.
 - *Closest Common Space Learning* (CCSL) exploits both label and structural information for data within and across domains. This is achieved by relating latent source-target domain oaurs, with the ability to disregard irrelevant source domain instances during adaptation.
 - In addition to achieving satisfactory performance on benchmark cross=domain classification datasets, our method perform favorably against recent unsupervised domain adaptation approaches on problems with imbalanced cross-domain data.
+
+## Related Works
+One can divide existing approaches into 3 categories: (1) instance reweighting, (2) feature space matching and (3) latent domain discovery.
+- (1) views the importance of each source-domain instance different during adaptation, instance reweighting suppress es the difference between source and target domain data by minimizing the MMDd, or the *Kullback-Leibler distances*.
+- (2) is among the popular techniques for unsupervised domain adaptation. This aim at discovering a common feature space wich allows matching of data data distributions across domains.
