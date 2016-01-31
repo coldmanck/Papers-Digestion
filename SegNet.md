@@ -15,3 +15,18 @@ By reusing max-pooling indices in the decoding process, it achieve
 - it improves boundary delineation
 - it reduces the number of parameters enabling end-to-end training
 - this form of upsampling can be incorporated into any encoder-decoder architecture
+
+## Literature
+Typically, a patch is fed into a classifier e.g. random forest or boosting, to predict the class probabilities of the center pixel. These per-pixel noisy predictions (often called unary terms) from the classifiers are then smoothed by using a pair-wise or higher order CRF to improve the accuracy. The result of all these techniques indicate **the need for improved features for classification**.
+
+- The CRF-RNN network can be appended to any core segmentation engine including SegNet.
+- Multi-scale deep architectures are also being pursued.
+
+Several of the recently proposed deep architectures for seg- mentation are not feed-forward in inference time. They require either MAP inference over a CRF or aids such as region proposals for inference. **SegNet on the other hand uses decoders to obtain features for accurate pixel-wise classification.**
+
+The recently proposed Deconvolutional Network and its semi-supervised variant the Decoupled network use the max locations of the encoder feature maps (pooling indices) to perform non-linear upsampling in the decoder network. **In this work we discard the fully connected layers of the VGG16 encoder network which enables us to train the network using the relevant training set using SGD optimization.**
+
+**This work was inspired by the unsupervised feature learning architecture proposed by Ranzato et al. [1]**
+
+## Reference
+[1] M. Ranzato, F. J. Huang, Y. Boureau, and Y. LeCun, “Unsupervised learning of invariant feature hierarchies with applications to object recognition,” in CVPR, 2007.
